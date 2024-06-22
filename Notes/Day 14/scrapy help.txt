@@ -1,0 +1,56 @@
+scrapy helps you to write spider
+
+this is also used web scrapying
+
+scrapy is asynchronous. so it can crawl through multiple pages and 
+find information faster
+
+
+install scrapy
+pip install scrapy
+
+in scrapy there exists a class Spider
+write your class and inherit from scrapy.Spider
+
+class MyClass(scrapy.Spider):
+       strat_urls=['https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture']
+
+       def parse(self,response):
+
+this class will tell scrpay what to do
+where to start crawling
+
+
+
+
+1. create a folder scrapydemo
+2. create blank project for scrapy
+    c:\...\scrapydemo>scrapy startproject movie
+It will generate many files 
+We won't be using most of these files in this beginners project, 
+
+ --->explanation of each as each one has a special purpose:
+
+1.1. settings.py is where all your project settings are contained, like activating pipelines, middlewares etc. 
+Here you can change the delays, concurrency, and lots more things.
+
+1.2. items.py is a model for the extracted data. You can define a custom model (like a ProductItem) that will 
+inherit the Scrapy Item class and contain your scraped data.
+
+1.3. pipelines.py is where the item yielded by the spider gets passed, it’s mostly used to clean the text and 
+connect to file outputs or databases (CSV, JSON SQL, etc).
+
+1.4. middlewares.py is useful when you want to modify how the request is made and scrapy handles the response.
+1.5. scrapy.cfg is a configuration file to change some deployment settings, etc.
+
+3. write movie_spider.py file inside spiders folder
+
+4. go to scrapydemo/movie 
+3. to run the program
+  c:\.....\scrapydemo/movie> scrapy crawl movie -o moviedata.csv
+
+
+
+
+
+ 

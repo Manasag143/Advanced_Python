@@ -1,0 +1,17 @@
+use following files for student analysis
+student.xls, student1.xls, interviewe_rating.xls
+
+find answers forthe following questions
+1. what is interviewer average rating of each student
+2. add a new column by name technology and assign values based on following rules
+if the marks of students >80 and rating > 4 then 
+allocate Python project 
+if rating > 3 and marks > 90 then assign java project
+if rating>4  then assign python training
+otherwise assign java training
+3. add a new column location and assign values based on following rules
+if student marks > 80 then location is pune:
+    <80 and > 70 then location is delhi
+    otherwise mumbai
+4. plot pie chart locationwise
+5. plot a bar chart technologywise

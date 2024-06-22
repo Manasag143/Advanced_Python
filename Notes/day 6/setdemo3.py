@@ -1,0 +1,14 @@
+s={1,2,3,11,21}
+s1={11,21,10,20}
+print("union",s.union(s1),s|s1)
+print("intersection",s.intersection(s1),s&s1)
+print("difference",s.difference(s1),s-s1)
+print("symmetric_difference",s.symmetric_difference(s1),s^s1)
+s=s-s1
+print("difference_update",s)
+s={1,2,3,11,21}
+s=s^s1
+print("symmetric_difference_update",s)
+print("issubset",s.issubset(s1))
+print("issuperset",s.issuperset(s1))
+print("isdisjoint",s.isdisjoint(s1))

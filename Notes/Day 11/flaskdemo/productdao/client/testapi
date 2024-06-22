@@ -1,0 +1,11 @@
+import requests
+response = requests.get("http://127.0.0.1:5000/products")
+print(response)
+response.content() # Return the raw bytes of the data payload
+response.text() # Return a string representation of the data payload
+response.json() # This method is convenient when the API returns JSON
+
+
+response = requests.post('http://127.0.0.1:5000/products', data = {'key':'value'})
+# Update an existing resource
+requests.put('http://127.0.0.1:5000/products', data = {'key':'value'})
